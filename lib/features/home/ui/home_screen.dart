@@ -13,61 +13,73 @@ class HomeScreen extends StatelessWidget {
               itemCount: 15,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            CircleAvatar(),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text('Group Name'),
+                            Text(' - 12 days ago'),
+                            Expanded(child: SizedBox()),
+                            Icon(Icons.more_vert_outlined)
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                            'Description of a Post comes here as there might be a big caption'),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Image.asset('./assets/images/Timeline-6.jpg'),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text('12k likes - 1k comments'),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              CircleAvatar(),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text('Group Name'),
-                              Text(' - 12 days ago'),
-                              Expanded(child: SizedBox()),
-                              Icon(Icons.menu)
-                            ],
-                          ),
-                          const Text(
-                              'Description of a Post comes here as there might be a big caption'),
+                          GestureDetector(
+                              onTap: () {},
+                              child: const Icon(Icons.thumb_up_outlined)),
                           const SizedBox(
-                            height: 10,
+                            width: 10,
                           ),
-                          Image.asset('./assets/images/Timeline-6.jpg'),
+                          GestureDetector(
+                              onTap: () {},
+                              child: const Icon(Icons.mode_comment_outlined)),
                           const SizedBox(
-                            height: 10,
+                            width: 10,
                           ),
-                          const Text('12k likes - 1k comments'),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Icon(Icons.thumb_up_outlined),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Icon(Icons.mode_comment_outlined),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Icon(Icons.share)
-                            ],
-                          )
+                          GestureDetector(
+                              onTap: () {}, child: const Icon(Icons.share))
                         ],
                       ),
-                    ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Divider()
+                    ],
                   ),
                 );
               }),
@@ -76,18 +88,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-// ListTile(
-//                   leading: const CircleAvatar(),
-//                   title: const Text('Group Name'),
-//                   subtitle: Column(
-//                     children: [
-//                       const Text(
-//                           'Description of a Post comes here as there might be a big caption'),
-//                       const SizedBox(
-//                         height: 20,
-//                       ),
-//                       Image.asset('./assets/images/Timeline-6.jpg')
-//                     ],
-//                   ),
-//                 );
