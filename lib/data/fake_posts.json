@@ -1,0 +1,119 @@
+[
+    {
+        "postId":"n1",
+        "postCaption":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet tellus cras adipiscing enim eu. Arcu non odio euismod lacinia at quis risus.",
+        "imageUrl":"https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-15T10:30:00Z",
+        "likes":50,
+        "comments":20,
+        "groupName":"Nature Team"
+    },
+    {
+        "postId":"n2",
+        "postCaption":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet tellus cras adipiscing enim eu. Arcu non odio euismod lacinia at quis risus.",
+        "imageUrl":"https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-14T15:45:00Z",
+        "likes":200,
+        "comments":40,
+        "groupName":"Nature Team"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet tellus cras adipiscing enim eu. Arcu non odio euismod lacinia at quis risus.",
+        "imageUrl":"https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-14T15:45:00Z",
+        "likes":1200,
+        "comments":70,
+        "groupName":"Herbivours"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Pharetra massa massa.",
+        "imageUrl":"https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+        "timeAgo":"2023-10-12T08:15:00Z",
+        "likes":5000,
+        "comments":20,
+        "groupName":"UniGroup Rocks"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Massa tincidunt dui ut ornare lectus sit amet est. ",
+        "imageUrl":"https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-11T19:30:00Z",
+        "likes":600,
+        "comments":10,
+        "groupName":"Herbivours"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies.",
+        "imageUrl":"https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-10T14:10:00Z",
+        "likes":5,
+        "comments":2,
+        "groupName":"UniGroup Rocks"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Et ligula ullamcorper malesuada proin libero.",
+        "imageUrl":"https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80",
+        "timeAgo":"2023-10-09T22:05:00Z",
+        "likes":55,
+        "comments":0,
+        "groupName":"Nature Team"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Eget dolor morbi non arcu. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna. Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus.",
+        "imageUrl":"https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-08T11:55:00Z",
+        "likes":1150,
+        "comments":15,
+        "groupName":"UniGroup Rocks"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Vel eros donec ac odio tempor orci dapibus",
+        "imageUrl":"https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-07T16:40:00Z",
+        "likes":1458,
+        "comments":48,
+        "groupName":"Herbivours"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Mi proin sed libero enim. Laoreet sit amet cursus sit amet. Eu feugiat pretium nibh ipsum consequat nisl vel.",
+        "imageUrl":"https://images.unsplash.com/photo-1621849400072-f554417f7051?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+        "timeAgo":"2023-10-06T09:25:00Z",
+        "likes":854,
+        "comments":41,
+        "groupName":"Nature Team"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Vitae auctor eu augue ut lectus arcu bibendum at. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit.",
+        "imageUrl":"https://images.unsplash.com/photo-1461301214746-1e109215d6d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-05T17:50:00Z",
+        "likes":2134,
+        "comments":53,
+        "groupName":"UniGroup Rocks"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Vitae auctor eu augue ut lectus arcu bibendum at. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit.",
+        "imageUrl":"https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+        "timeAgo":"2023-10-04T12:05:00Z",
+        "likes":1452,
+        "comments":12,
+        "groupName":"Herbivours"
+    },
+    {
+        "postId":"n1",
+        "postCaption":"Nunc eget lorem dolor sed viverra. Feugiat pretium nibh ipsum consequat. Feugiat in fermentum posuere urna. Urna nec tincidunt praesent semper feugiat nibh. Vulputate dignissim suspendisse in est ante in nibh mauris. Adipiscing commodo elit at imperdiet dui accumsan. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Dolor purus non enim praesent elementum facilisis leo vel. Erat pellentesque adipiscing commodo elit.",
+        "imageUrl":"https://images.unsplash.com/photo-1475656106224-d72c2ab53e8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "timeAgo":"2023-10-03T23:15:00Z",
+        "likes":2351,
+        "comments":12,
+        "groupName":"Nature Team"
+    }
+]
