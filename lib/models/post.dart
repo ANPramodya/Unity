@@ -1,42 +1,57 @@
+import 'package:unity_app/models/group.dart';
+
 class Post {
-  final String postId;
-  final String postCaption;
-  final String imageUrl;
-  final String timeAgo;
-  final int likes;
-  final int comments;
-  final String groupName;
+  String id;
+  String createdAt;
+  String caption;
+  String postImg;
+  String visibility;
+  String groupId;
+
+  Group? group;
+  int? postLikesCount;
+  int? commentsCount;
+  bool isLiked;
   Post({
-    required this.postId,
-    required this.postCaption,
-    required this.imageUrl,
-    required this.timeAgo,
-    required this.likes,
-    required this.comments,
-    required this.groupName,
+    required this.id,
+    required this.createdAt,
+    required this.caption,
+    required this.postImg,
+    required this.visibility,
+    required this.groupId,
+    this.group,
+    this.postLikesCount,
+    this.commentsCount,
+    required this.isLiked,
   });
 
   Map<String, dynamic> toMap() {
     return {
-      'postId': postId,
-      'postCaption': postCaption,
-      'imageUrl': imageUrl,
-      'timeAgo': timeAgo,
-      'likes': likes,
-      'comments': comments,
-      'groupName': groupName,
+      'id': id,
+      'createdAt': createdAt,
+      'caption': caption,
+      'postImg': postImg,
+      'visibility': visibility,
+      'groupId': groupId,
+      'group': group?.toMap(),
+      'postLikesCount': postLikesCount,
+      'commentsCount': commentsCount,
+      'isLiked': isLiked,
     };
   }
 
   factory Post.fromMap(Map<String, dynamic> map) {
     return Post(
-      postId: map['postId'] ?? '',
-      postCaption: map['postCaption'] ?? '',
-      imageUrl: map['imageUrl'] ?? '',
-      timeAgo: map['timeAgo'] ?? '',
-      likes: map['likes']?.toInt() ?? 0,
-      comments: map['comments']?.toInt() ?? 0,
-      groupName: map['groupName'] ?? '',
+      id: map['id'] ?? '',
+      createdAt: map['createdAt'] ?? '',
+      caption: map['caption'] ?? '',
+      postImg: map['postImg'] ?? '',
+      visibility: map['visibility'] ?? '',
+      groupId: map['groupId'] ?? '',
+      group: map['group'] != null ? Group.fromMap(map['group']) : null,
+      postLikesCount: map['postLikesCount']?.toInt(),
+      commentsCount: map['commentsCount']?.toInt(),
+      isLiked: map['isLiked'] ?? false,
     );
   }
 }

@@ -23,24 +23,26 @@ class _TabScreenState extends State<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: NestedScrollView(
-        headerSliverBuilder: (((context, innerBoxIsScrolled) => [
-              SliverAppBar(
-                floating: true,
-                snap: true,
-                centerTitle: true,
-                elevation: 5.0,
-                title: Text(
-                  _pageDetails[_selectedPageIndex]['title'],
-                  style: const TextStyle(
-                      fontSize: 25.0,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 1.1),
-                ),
-              )
-            ])),
-        body: _pageDetails[_selectedPageIndex]['pageName'],
-      ),
+      body: _selectedPageIndex != 0
+          ? NestedScrollView(
+              headerSliverBuilder: (((context, innerBoxIsScrolled) => [
+                    SliverAppBar(
+                      floating: true,
+                      snap: true,
+                      centerTitle: true,
+                      elevation: 5.0,
+                      title: Text(
+                        _pageDetails[_selectedPageIndex]['title'],
+                        style: const TextStyle(
+                            fontSize: 25.0,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 1.1),
+                      ),
+                    )
+                  ])),
+              body: _pageDetails[_selectedPageIndex]['pageName'],
+            )
+          : _pageDetails[_selectedPageIndex]['pageName'],
 
       drawer: const MyDrawer(),
       // body: _pageDetails[_selectedPageIndex]['pageName'],

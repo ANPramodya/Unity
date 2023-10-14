@@ -8,7 +8,7 @@ class PostService {
 
   Future<List<Post>> fetchPosts() async {
     final apiResponse = await _postApi.fetchPosts();
-
+    print(apiResponse);
     final posts = apiResponse.map((data) => Post.fromMap(data)).toList();
     return posts;
   }

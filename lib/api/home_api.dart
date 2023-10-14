@@ -1,21 +1,21 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:unity_app/config/home_config.dart';
+
 class PostApi {
-  final String baseUrl;
-
-  PostApi({
-    required this.baseUrl,
-  });
-
   Future<List<Map<String, dynamic>>> fetchPosts() async {
-    final response = await http.get(Uri.parse('$baseUrl/posts'));
+    try {
+      final response = await http.get(Uri.parse('$baseUrl/post/allPosts'));
 
-    if (response.statusCode == 200) {
-      final List<dynamic> data = json.decode(response.body);
-      return data.cast<Map<String, dynamic>>();
-    } else {
-      throw Exception('Failed To fetch posts');
+      if (response.statusCode == 200) {
+        final List<dynamic> data = json.decode(response.body);
+        return data.cast<Map<String, dynamic>>();
+      } else {
+        throw Exception('Failed To fetch posts');
+      }
+    } catch (error) {
+      throw Exception('Failed PostApi');
     }
   }
 }
