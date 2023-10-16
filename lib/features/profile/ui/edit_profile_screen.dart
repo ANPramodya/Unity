@@ -8,11 +8,19 @@ class EditProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Edit Profile'),
+          title: Text(
+            'Edit Profile',
+            style: const TextStyle(
+                fontSize: 25.0,
+                fontWeight: FontWeight.w400,
+                letterSpacing: 1.1),
+          ),
           centerTitle: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           )),
       body: Column(
         children: [

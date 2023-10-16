@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unity_app/features/settings/ui/settings_screen.dart';
 import 'package:unity_app/services/bloc_exports.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -56,6 +57,16 @@ Widget drawerMenu(BuildContext context) => Container(
             const ListTile(
               leading: Icon(Icons.drafts_outlined),
               title: Text('Invite Firends'),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => SettingsScreen()));
+              },
+              child: const ListTile(
+                leading: Icon(Icons.settings_outlined),
+                title: Text('Settings'),
+              ),
             ),
             const ListTile(
               leading: Icon(Icons.question_mark_outlined),

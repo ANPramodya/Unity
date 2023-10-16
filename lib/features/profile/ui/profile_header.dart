@@ -11,12 +11,12 @@ class ProfileHeader extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.3 + 70,
+          height: MediaQuery.of(context).size.height * 0.25 + 70,
           width: MediaQuery.of(context).size.width,
         ),
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.3,
+          height: MediaQuery.of(context).size.height * 0.25,
           child: CachedNetworkImage(
             imageUrl:
                 'https://images.unsplash.com/photo-1506268452458-bfb3757ed859?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80',

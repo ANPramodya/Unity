@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:unity_app/features/friends/bloc/friend_bloc.dart';
 import 'package:unity_app/services/app_router.dart';
 import 'package:unity_app/services/app_theme.dart';
 import 'package:unity_app/widgets/tab_screen.dart';
@@ -32,6 +33,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => SwitchBloc(),
+        ),
+        BlocProvider(
+          create: (context) => FriendBloc(),
         ),
       ],
       child: BlocBuilder<SwitchBloc, SwitchState>(
