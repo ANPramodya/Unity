@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           create: (context) => ProfileBloc(),
         ),
         BlocProvider(
-          create: (context) => GroupBloc(),
+          create: (context) => ChatBloc(),
         ),
         BlocProvider(
           create: (context) => SwitchBloc(),
