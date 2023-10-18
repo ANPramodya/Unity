@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:unity_app/features/chat/ui/group_chat_tab_screen.dart';
-import 'package:unity_app/features/chat/ui/individual_chat_tab_screen.dart';
-import 'package:unity_app/features/chat/ui/job_post_tab_screen.dart';
+import 'package:unity_app/features/chat/ui/group_chat/group_chat_tab_screen.dart';
+import 'package:unity_app/features/chat/ui/individual_chat/individual_chat_tab_screen.dart';
+import 'package:unity_app/features/chat/ui/jobs/job_post_tab_screen.dart';
 
 class ChatMainScreen extends StatelessWidget {
   const ChatMainScreen({super.key});
@@ -11,7 +11,7 @@ class ChatMainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        TabBar(tabs: [
+        TabBar(indicatorColor: Colors.amber, tabs: [
           Tab(
             icon: Icon(Icons.group_outlined),
           ),

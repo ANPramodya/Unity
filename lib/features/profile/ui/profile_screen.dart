@@ -43,7 +43,7 @@ class ProfileScreen extends StatelessWidget {
         ),
         SizedBox(
           height: 50.0,
-          width: MediaQuery.of(context).size.width * 0.9,
+          width: MediaQuery.of(context).size.width * 0.5,
           child: OutlinedButton(
               onPressed: () {
                 Navigator.push(context,
