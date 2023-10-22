@@ -1,59 +1,75 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:unity_app/features/profile/ui/edit_profile_tab.dart';
+import 'package:unity_app/features/profile/ui/edit_resume_tab.dart';
 
-class EditProfile extends StatelessWidget {
+class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
 
   @override
+  State<EditProfile> createState() => _EditProfileState();
+}
+
+class _EditProfileState extends State<EditProfile>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+
+    _tabController.addListener(() {
+      setState(() {
+        switch (_tabController.index) {
+          case 0:
+            AppBarTitle = 'Edit Profile';
+            break;
+          case 1:
+            AppBarTitle = 'Edit Resume';
+            break;
+        }
+      });
+    });
+  }
+
+  String AppBarTitle = 'Edit Profile';
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          title: Text(
-            'Edit Profile',
-            style: const TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.w400,
-                letterSpacing: 1.1),
-          ),
-          centerTitle: true,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          )),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 20.0,
-          ),
-          Center(
-            child: Stack(
-              children: [
-                CircleAvatar(
-                  radius: 70.0,
-                  backgroundImage: CachedNetworkImageProvider(
-                      'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80'),
-                ),
-                Positioned(
-                    bottom: 0.0,
-                    right: 0.0,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.camera_alt_outlined,
-                        color: Colors.grey,
-                      ),
-                    ))
-              ],
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              AppBarTitle,
+              style: const TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.w400,
+                  letterSpacing: 1.1),
             ),
+            centerTitle: true,
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back_ios),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            bottom: TabBar(controller: _tabController, tabs: const [
+              Tab(
+                icon: Icon(Icons.person_outline_rounded),
+                text: 'Profile',
+              ),
+              Tab(
+                icon: Icon(Icons.description_outlined),
+                text: "Resume",
+              )
+            ]),
           ),
-          TextField(
-            controller: TextEditingController(),
-            decoration: InputDecoration(labelText: "Full Name"),
-          )
-        ],
-      ),
+          body: TabBarView(
+            controller: _tabController,
+            children: const [EditProfileTab(), EditResumeTab()],
+          )),
     );
   }
 }

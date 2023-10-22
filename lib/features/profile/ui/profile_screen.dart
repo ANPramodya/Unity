@@ -41,19 +41,21 @@ class ProfileScreen extends StatelessWidget {
         const SizedBox(
           height: 20.0,
         ),
-        SizedBox(
-          height: 50.0,
-          width: MediaQuery.of(context).size.width * 0.5,
-          child: OutlinedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const EditProfile()));
-              },
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0))),
-              ),
-              child: const Text('Edit Profile')),
+        Center(
+          child: SizedBox(
+            height: 50.0,
+            width: MediaQuery.of(context).size.width * 0.9,
+            child: OutlinedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const EditProfile()));
+                },
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0))),
+                ),
+                child: const Text('Edit Profile')),
+          ),
         ),
         const SizedBox(
           height: 20,
