@@ -102,7 +102,7 @@ class EditProfileTab extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Email address',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
@@ -114,69 +114,113 @@ class EditProfileTab extends StatelessWidget {
                     }
                     return null;
                   },
-                  decoration: InputDecoration(),
+                  style: const TextStyle(color: Colors.grey),
+                  decoration: const InputDecoration(),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                Text('University',
+                const Text('University',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                TextFormField(),
+                TextFormField(
+                  initialValue: 'University of Kelaniya',
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'This field is reqiured';
+                    }
+                    return null;
+                  },
+                  style: const TextStyle(color: Colors.grey),
+                ),
                 const SizedBox(
                   height: 30,
                 ),
-                Text('Some Data',
+                const Text('Some Data',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                TextFormField(),
+                TextFormField(
+                  initialValue: 'Some Fake Data',
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'This field is reqiured';
+                    }
+                    return null;
+                  },
+                  style: const TextStyle(color: Colors.grey),
+                ),
                 const SizedBox(
                   height: 30,
                 ),
-                Text('Some Information',
+                const Text('Some Information',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                TextFormField(),
+                TextFormField(
+                  initialValue: 'Some Fake Information',
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'This field is reqiured';
+                    }
+                    return null;
+                  },
+                  style: const TextStyle(color: Colors.grey),
+                ),
                 const SizedBox(
                   height: 30,
                 ),
-                Text('Fake Data',
+                const Text('Fake Data',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                TextFormField(),
+                TextFormField(
+                  initialValue: 'Some Fake Data',
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'This field is reqiured';
+                    }
+                    return null;
+                  },
+                  style: const TextStyle(color: Colors.grey),
+                ),
                 const SizedBox(
                   height: 30,
                 ),
-                Text('Fake Information',
+                const Text('Fake Information',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                TextFormField(),
+                TextFormField(
+                  initialValue: 'Some Actual Information',
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'This field is reqiured';
+                    }
+                    return null;
+                  },
+                  style: const TextStyle(color: Colors.grey),
+                ),
               ],
             ),
           ),
           const SizedBox(
             height: 30.0,
           ),
-          Expanded(
-            child: Row(children: [
-              Expanded(
-                  child: OutlinedButton(
-                      style: ButtonStyle(
-                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0))),
-                      ),
-                      onPressed: () {},
-                      child: Text('Cancel'))),
-              const SizedBox(
-                width: 10.0,
-              ),
-              Expanded(
-                  child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.greenAccent),
-                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0))),
-                      ),
-                      onPressed: () {},
-                      child: Text('Save'))),
-            ]),
-          ),
+          Row(children: [
+            Expanded(
+                child: OutlinedButton(
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0))),
+                    ),
+                    onPressed: () {},
+                    child: const Text('Cancel'))),
+            const SizedBox(
+              width: 10.0,
+            ),
+            Expanded(
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.greenAccent),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0))),
+                    ),
+                    onPressed: () {},
+                    child: const Text('Save'))),
+          ]),
           const SizedBox(
             height: 30.0,
           )
